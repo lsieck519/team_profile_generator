@@ -1,12 +1,13 @@
 const inquirer = require("inquirer")
 const { writeFile } = require('fs').promises;
+const generateHTML = require("./src/template.js")
 
 
 const promptUser = () => {
   return inquirer.prompt([
     {
       type: 'input',
-      name: 'name',
+      name: 'emName',
       message: 'Employee Full Name: ',
     },
     {
@@ -24,43 +25,32 @@ const promptUser = () => {
       name: 'email',
       message: 'Employee Email Address:',
     },
+    
+    //need to add logic around role selection 
+
     {
       type: 'input',
       name: 'github',
-      message: 'Employee GitHub Username:',
+      message: 'Engineer GitHub Username:',
     },
     {
       type: 'input',
-      name: 'location',
-      message: 'Employee Location:',
+      name: 'officeNumber',
+      message: 'Manager office number:',
     },
+
+    {
+      type: 'input',
+      name: 'school',
+      message: 'Intern school:',
+    },
+
   ]);
 };
 
-const generateHTML = ({ name, title, eid, email, github, location }) =>
-  `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My Team</title>
-</head>
-<body>
-<div class="container">
-  <h1>${name}</h1>
-  <h2>${title}<h2>
-  <ul>
-    <li>${eid}</li>
-    <li>${email}</li>
-    <li>${github}</li>
-    <li>${location}</li>
- </div> 
-</body>
-</html>`;
-
 const init = () => {
   promptUser()
-    .then((answers) => writeFile('index.html', generateHTML(answers)))
+    .then((newEmployee) => writeFile('./dist/index.html', generateHTML(newEmployee)))
     .then(() => console.log('Successfully wrote to index.html'))
     .catch((err) => console.error(err));
 };
