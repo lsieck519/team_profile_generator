@@ -1,5 +1,24 @@
 /* test */
 
 h1 {
-    color: blue;
+    color: darkslategray;
+}
+
+
+.card {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 1em;
+    padding: 1em;
+    background-color: lightblue;
+}
+  
+.container {
+    display: flex;
+}
+  
+.card:hover {
+    width: 210px;
+    height: 210px;
 }

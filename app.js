@@ -21,7 +21,7 @@ const promptUser = async () => {
     },
     {
       type: 'input',
-      name: 'eid',
+      name: 'id',
       message: '4-digit Employee ID:',
     },
     {
@@ -69,38 +69,38 @@ const promptUser = async () => {
 
   if (data.title === "Manager") {
     const newManager = new Manager (
-      data.eid,
+      data.id,
       data.emName,
       data.email,
       data.officeNumber,
     )
     newEmployee.push(newManager)
-    console.log(newManager);
+    // console.log(newManager);
   } else if (data.title === "Engineer") {
     const newEngineer = new Engineer (
-      data.eid,
+      data.id,
       data.emName,
       data.email,
       data.github,
     )
     newEmployee.push(newEngineer)
-    console.log(newEngineer);
+    // console.log(newEngineer);
   } else {
     const newIntern = new Intern (
-      data.eid,
+      data.id,
       data.emName,
       data.email,
       data.school,
     )
     newEmployee.push(newIntern)
-    console.log(newIntern);
+    // console.log(newIntern);
   } 
 
 
   if (data.next === "Add More"){
-    return promptUser()
+    promptUser()
   } else {
-    return createProfile()
+    createProfile()
   }
 };
 
@@ -108,32 +108,11 @@ const promptUser = async () => {
 promptUser()
 
 
+
+
 const createProfile = () => {
   fs.writeFileSync('./dist/index.html', generateHTML(newEmployee));
+  console.log(newEmployee);
 }
 
 
-
-//commenting out for now bc i dont think im going to include an "other" job title option but still undecided 
-// const Employee = require("./lib/employee")
-
- // {
-    //   type: 'input',
-    //   name: 'other',
-    //   message: 'Job Title:',
-    //   when: (newEmployee) => newEmployee.title === 'Other',
-    // },
-
-
-// else {
-
-//   //might remove the 'other' option
-//   const newOther = new Employee (
-//     data.eid,
-//     data.emName,
-//     data.email,
-//     data.other,
-//   )
-//   newEmployee.push(newOther)
-//   console.log(newEmployee)
-// }

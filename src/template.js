@@ -1,19 +1,15 @@
-const generateHTML = () => {
-
-    //need slightly different template for each role due to different criteria 
-    // const generateManager = () => {
-
-    // }
-
-    // const generateEngineer = () => {
-        
-    // }
-
-    // const generateIntern = () => {
-        
-    // }
+const generateHTML = (newEmployee) => {
 
 
+    let firstName = newEmployee[0].emName;
+    let firstID = newEmployee[0].id;
+    let firstEmail = newEmployee[0].email;
+
+    let secondName = newEmployee[1].emName;
+    let secondID = newEmployee[1].id;
+    let secondEmail = newEmployee[1].email;
+
+  
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -28,13 +24,37 @@ const generateHTML = () => {
 
     <header>
 
-    <h1> test </h1>
+    <h1>Employee Profiles</h1>
 
     </header>
 
+    <section class="container">
 
+    <div class="card">
 
-    
+    <h1>Employee One</h1>
+
+    <ul>
+    <li>${firstName}</li>
+    <li>${firstEmail}</li>
+    <li>${firstID}</li>
+    </ul>
+
+    </div>
+
+    <div class="card">
+
+    <h1>Employee Two</h1>
+
+    <ul>
+    <li>${secondName}</li>
+    <li>${secondEmail}</li>
+    <li>${secondID}</li>
+    </ul>
+
+    </div>
+    </section>
+
     </body>
     </html>
     `
