@@ -5,7 +5,7 @@ const generateHTML = require("./src/template.js")
 const Engineer = require("./lib/engineer")
 const Intern = require("./lib/intern")
 const Manager = require("./lib/manager")
-const Employee = require("./lib/employee")
+
 
 let newEmployee =[];
 
@@ -33,7 +33,7 @@ const promptUser = async () => {
       type: 'list',
       name: 'title',
       message: 'Job Title:',
-      choices: ['Manager','Engineer','Intern', 'Other'],
+      choices: ['Manager','Engineer','Intern'],
     },
 
     {
@@ -57,13 +57,7 @@ const promptUser = async () => {
       when: (newEmployee) => newEmployee.title === 'Intern',
     },
 
-    {
-      type: 'input',
-      name: 'other',
-      message: 'Job Title:',
-      when: (newEmployee) => newEmployee.title === 'Other',
-    },
-
+   
     {
       type: 'list',
       name: 'next',
@@ -75,46 +69,32 @@ const promptUser = async () => {
 
   if (data.title === "Manager") {
     const newManager = new Manager (
-      data.emName,
       data.eid,
+      data.emName,
       data.email,
-      data.title,
       data.officeNumber,
     )
     newEmployee.push(newManager)
     console.log(newManager);
   } else if (data.title === "Engineer") {
     const newEngineer = new Engineer (
-      data.emName,
       data.eid,
+      data.emName,
       data.email,
-      data.title,
       data.github,
     )
     newEmployee.push(newEngineer)
     console.log(newEngineer);
-  } else if (data.title === "Intern"){
+  } else {
     const newIntern = new Intern (
-      data.emName,
       data.eid,
+      data.emName,
       data.email,
-      data.title,
       data.school,
     )
     newEmployee.push(newIntern)
     console.log(newIntern);
-  } else {
-
-    //might remove the 'other' option
-    const newOther = new Employee (
-      data.emName,
-      data.eid,
-      data.email,
-      data.other,
-    )
-    newEmployee.push(newOther)
-    console.log(newEmployee)
-  }
+  } 
 
 
   if (data.next === "Add More"){
@@ -134,4 +114,26 @@ const createProfile = () => {
 
 
 
+//commenting out for now bc i dont think im going to include an "other" job title option but still undecided 
+// const Employee = require("./lib/employee")
 
+ // {
+    //   type: 'input',
+    //   name: 'other',
+    //   message: 'Job Title:',
+    //   when: (newEmployee) => newEmployee.title === 'Other',
+    // },
+
+
+// else {
+
+//   //might remove the 'other' option
+//   const newOther = new Employee (
+//     data.eid,
+//     data.emName,
+//     data.email,
+//     data.other,
+//   )
+//   newEmployee.push(newOther)
+//   console.log(newEmployee)
+// }
