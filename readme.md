@@ -36,8 +36,9 @@ GIVEN a command-line application that accepts user input
 ```
 
 ## Installation
-Clone this repository to your terminal and then use `npm init -y` and `npm i` to install dependencies 
-Run `node app.js` to start prompts 
+- Clone this repository to your terminal and then use `npm init -y` and `npm i` to install dependencies 
+
+- Run `node app.js` to start prompts 
 
 ## Usage
 Use this to create an HTML page for team profiles. See the video below for demonstration
