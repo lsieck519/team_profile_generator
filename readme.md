@@ -9,7 +9,7 @@ SO THAT I have quick access to their emails and GitHub profiles
 ## Acceptance Criteria 
 
 GIVEN a command-line application that accepts user input
-
+```
 - WHEN I am prompted for my team members and their information
     - THEN an HTML file is generated that displays a nicely formatted team roster based on user input
 
@@ -33,14 +33,16 @@ GIVEN a command-line application that accepts user input
 
 - WHEN I decide to finish building my team
     - THEN I exit the application, and the HTML is generated
-
+```
 
 ## Installation
+Clone this repository to your terminal and then use `npm init -y` and `npm i` to install dependencies 
+Run `node app.js` to start prompts 
 
 ## Usage
+Use this to create an HTML page for team profiles. See the video below for demonstration
 
-## License
-
-## Credit
+## Questions
+[Contact me on GitHub](https://github.com/lsieck519)
 
 

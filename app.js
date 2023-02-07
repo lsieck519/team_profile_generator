@@ -13,7 +13,12 @@ const promptUser = async () => {
   const data = await inquirer
   
   .prompt([
-   
+    {
+      type: 'list',
+      name: 'title',
+      message: 'Job Title:',
+      choices: ['Manager','Engineer','Intern'],
+    },
     {
       type: 'input',
       name: 'emName',
@@ -29,13 +34,6 @@ const promptUser = async () => {
       name: 'email',
       message: 'Email Address:',
     },
-    {
-      type: 'list',
-      name: 'title',
-      message: 'Job Title:',
-      choices: ['Manager','Engineer','Intern'],
-    },
-
     {
       type: 'input',
       name: 'officeNumber',
@@ -62,7 +60,7 @@ const promptUser = async () => {
       type: 'list',
       name: 'next',
       message: 'Select one',
-      choices: ['Add More', 'Complete Creation']
+      choices: ['Complete Creation', 'Add More' ]
     }
 
   ])
