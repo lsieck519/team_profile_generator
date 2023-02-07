@@ -12,7 +12,7 @@ const generateHTML = (newEmployee) => {
     </head>
     <body>
 
-    <section class="hero is-success">
+    <section class="hero">
         <div class="hero-body">
     <p class="title">
         Meet the Team
@@ -643,7 +643,7 @@ else if (newEmployee.length == 3 ) {
     
         <h1>${firstName}</h1>
             <ul>
-            <li class="title">${firstTitle}</li>
+            <li class="title2">${firstTitle}</li>
                 <li>${firstID}</li>
                 <li>${firstEmail}</li>
                 <li>${firstAdditional}</li> 

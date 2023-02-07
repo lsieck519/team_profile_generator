@@ -22,7 +22,7 @@ const promptUser = async () => {
     {
       type: 'input',
       name: 'emName',
-      message: 'Full Name: ',
+      message: 'Employee Name: ',
     },
     {
       type: 'input',
@@ -60,7 +60,7 @@ const promptUser = async () => {
       type: 'list',
       name: 'next',
       message: 'Select one',
-      choices: ['Complete Creation', 'Add More' ]
+      choices: ['Create Team Page', 'Add More' ]
     }
 
   ])
