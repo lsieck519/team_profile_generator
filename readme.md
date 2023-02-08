@@ -40,6 +40,8 @@ GIVEN a command-line application that accepts user input
 
 - Run `node app.js` to start prompts 
 
+## Preview
+
 ## Usage
 Use this to create an HTML page for team profiles. See the video below for demonstration
 
