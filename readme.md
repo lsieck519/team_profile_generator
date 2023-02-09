@@ -45,6 +45,9 @@ GIVEN a command-line application that accepts user input
 ## Usage
 Use this to create an HTML page for team profiles. See the video below for demonstration
 
+<iframe src="https://drive.google.com/file/d/1_XfCredo-WblD9tNb1qxmvaHcjeDCJQx/preview" width="640" height="480" allow="autoplay"></iframe>
+
+
 ## Questions
 [Contact me on GitHub](https://github.com/lsieck519)
 
