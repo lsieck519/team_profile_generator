@@ -41,6 +41,8 @@ GIVEN a command-line application that accepts user input
 - Run `node app.js` to start prompts 
 
 ## Preview
+<img width="1228" alt="TPG Preview" src="https://user-images.githubusercontent.com/99048123/217894070-61b92c97-ea21-41cf-8362-6790341775d8.png">
+
 
 ## Usage
 Use this to create an HTML page for team profiles. 
